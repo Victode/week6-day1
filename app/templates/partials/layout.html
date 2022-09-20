@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='layout.css')}}">
 </head>
 <body>
     <header>
-        This is my website you hurrrr
+        <h4>This is my website you hurrrr</h4>
+        <ul>
+            <li><a href="http://127.0.0.1:5000/">Home</a></li>
+            <li><a href="http://127.0.0.1:5000/about">About page</a></li>
+            <li><a href="http://127.0.0.1:5000/register">Register</a></li>
+            <li><a href="http://127.0.0.1:5000/login">Login</a></li>
+            <li><a href="http://127.0.0.1:5000/blog">Blog Page</a></li>
+        </ul>
     </header>
-
+    
     <main>
         <!-- THIS IS WHERE WE WILL PUT EACH PAGE'S CONTENT -->
         {% block content %}{% endblock content %}
