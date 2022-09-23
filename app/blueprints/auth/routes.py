@@ -53,6 +53,7 @@ def login():
                 password = form.password.data
 
                 user = User.query.filter_by(email= email).first()
+                print(type(user))
                 
                 if user is None:
                     flash('There was not a user with that email.', 'danger')
