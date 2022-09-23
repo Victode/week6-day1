@@ -2,12 +2,14 @@ from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_login import LoginManager
 
 db = SQLAlchemy()
 migrate = Migrate()
 
-app = Flask(__name__)
 
+app = Flask(__name__)
+login_manager = LoginManager(app)
 app.config.from_object(Config) 
 
 db.init_app(app)
